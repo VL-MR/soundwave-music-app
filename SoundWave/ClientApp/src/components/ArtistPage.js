@@ -141,8 +141,8 @@ export function ArtistPage() {
                                     var isFavorite = false;
                                     if (favoriteTraсks) {
                                         var favoriteTrack = favoriteTraсks.find(track => {
-                                            let trackTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                            let compareTitle = musicTitle.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                                            let trackTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                            let compareTitle = musicTitle?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
                                             return track.songUrl === songUrl || trackTitle === compareTitle;
                                         });
                                         if (favoriteTrack) {
@@ -154,9 +154,8 @@ export function ArtistPage() {
                                         dbTrack = dbTracks.find(track => track.songUrl === `https://zvon.top${songUrl}`);
                                         if (!dbTrack) {
                                             dbTrack = dbTracks.find(track => {
-                                                let dbTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                                let compareTitle = musicTitle.replace(/\(.*?\)/g, '').trim().toLowerCase();
-
+                                                let dbTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                                let compareTitle = musicTitle?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
                                                 return dbTitle === compareTitle;
                                             });
                                         }
@@ -188,8 +187,8 @@ export function ArtistPage() {
                                     var isFavorite = false;
                                     if (favoriteTraсks) {
                                         var favoriteTrack = favoriteTraсks.find(track => {
-                                            let trackTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                            let compareTitle = dbTrack2.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                                            let trackTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                            let compareTitle = musicTitle?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
 
                                             return track.songUrl === dbTrack2.songUrl || trackTitle === compareTitle;
                                         });
