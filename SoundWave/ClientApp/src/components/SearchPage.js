@@ -201,8 +201,8 @@ export function SearchPage() {
                                 var isFavorite = false;
                                 if (favoriteTraсks) {
                                     var favoriteTrack = favoriteTraсks.find(track => {
-                                        let trackTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                        let compareTitle = musicTitle.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                                        let trackTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                        let compareTitle = musicTitle?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
                                         return track.songUrl === songUrl || trackTitle === compareTitle;
                                     });
                                     if (favoriteTrack) {
