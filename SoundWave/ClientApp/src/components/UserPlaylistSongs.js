@@ -166,7 +166,7 @@ export function UserPlaylistSongs() {
     const extractTrackData = (element) => {
         let musicTitle = $(element).find(".track").text().trim();
         let musicUrl = $(element).find(".play").data("url");
-        let musicImage = $(element).find(".playlistImg img").attr("data-src");
+        let musicImage = $(element).data("img");
         let musicArtist = $(element).find(".artist").text().trim();
         let musicArtistUrl = $(element).find(".popupMenu_link__personalMusic").attr("href");
         let songUrl = $(element).find(".artist").parent().attr("href");
@@ -202,7 +202,7 @@ export function UserPlaylistSongs() {
 
     const extractArtistData = (element) => {
         let artistName = $(element).find(".title").text().trim();
-        let artistImage = $(element).find(".cover_img").attr("data-src");
+        let artistImage = $(element).find(".cover_img").attr("src");
         let artistUrl = $(element).find("a").attr("href");
 
         if (artistName && artistImage && artistUrl) {
