@@ -1,0 +1,553 @@
+﻿/*----------------------------NavManu------------------------*/
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.navbar {
+    border-color: transparent !important;
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.5) !important;
+    background-color: rgb(15, 15, 15) !important;
+    /*margin-left: 300px;*/
+}
+
+
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.search-results {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+    .search-result-item:last-child {
+        border-bottom: none;
+    }
+
+.search-bar {
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 40px;
+}
+
+    .search-bar input {
+        flex-grow: 1;
+        color: white;
+        border: 1px solid rgb(78, 40, 156);
+        border-radius: 5px;
+        padding-right: 50px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: right 5px center;
+    }
+
+
+.suggestContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+}
+
+.suggestContainer {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    color: white;
+}
+
+    .suggestContainer .suggest img {
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+
+.category {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.type {
+    font-weight: bold;
+}
+
+.suggest {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    box-sizing: border-box;
+    color: white;
+}
+
+    .suggest > * {
+        flex: 1;
+        min-width: 0;
+        width: 50px;
+    }
+
+    .suggest img {
+        flex: none;
+        width: 50px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+
+    .suggest:hover {
+        background-color: #1a1a1a;
+    }
+
+
+
+
+/*----------------------------PageWithTracks------------------------*/
+
+
+.track-list {
+    list-style-type: none;
+    padding: 0;
+    /*margin-left: 300px;*/
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid rgb(111, 103, 91);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    box-sizing: border-box;
+    min-width: min-content;
+}
+
+    .track-item > * {
+        flex: 1 0 auto;
+        min-width: 0;
+        margin: 10px;
+        width: 50px;
+        user-select: none;
+    }
+
+
+    .track-item div {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+    .track-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(128, 0, 128, 0.9);
+        /*background-color: #1a1a1a;*/
+    }
+
+
+    .track-item button {
+        flex: none;
+        width: 50px;
+        margin-right: 10px;
+    }
+
+        .track-item button svg {
+            fill: white !important;
+        }
+
+        .track-item button:hover svg {
+            fill: rgba(128, 0, 128, 0.5) !important;
+        }
+
+
+    .track-item img {
+        flex: none;
+        width: 65px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+
+    .track-item .track-duration {
+        flex: none;
+        width: 50px;
+        margin-right: 10px;
+        color: white;
+        user-select: none;
+    }
+
+    .track-item div {
+        flex-grow: 1;
+        margin-right: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: rgb(152, 143, 129);
+    }
+
+
+    .track-item .track-link {
+        flex: none;
+        width: 500px;
+        color: white;
+        text-decoration: none;
+    }
+
+        .track-item .track-link:hover {
+            text-decoration: underline;
+        }
+
+    .track-item .track-download {
+        flex: none;
+        width: 30px;
+        color: #e8e6e3;
+        stroke: white;
+        fill: white;
+        cursor: pointer;
+    }
+
+        .track-item .track-download:hover {
+            text-decoration: underline;
+        }
+
+@media (max-width: 600px) {
+    .track-item div, .track-item .track-link {
+        width: 300px;
+    }
+}
+
+
+.artistImage {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+.rhap_button-clear {
+    background: none !important;
+}
+
+.rhap_main-controls-button {
+    background: none !important;
+}
+
+
+/*----------------------------ArtistPage------------------------*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.pagination-button {
+    color: white;
+    text-decoration-color: initial;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 20px;
+}
+
+    .pagination-button:hover {
+        color: darkslateblue;
+    }
+
+    .pagination-button:active, .pagination-button:focus {
+        color: darkslateblue;
+    }
+
+.download-icon:hover {
+    stroke: darkslateblue !important;
+}
+
+
+.current-page {
+    color: darkslateblue !important;
+}
+
+
+
+/*----------------------------SideBarMenu------------------------*/
+.sidebar-menu {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    /*border: 1px solid #ccc;*/
+    background-color: rgb(16, 17, 18);
+    z-index: 1000;
+}
+
+    .sidebar-menu a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+/*.sidebar-menu.scrolled {
+        transform: translate3d(0px, 0px, 0px);
+        top: 0px;
+    }*/
+
+.listStyle {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin-left: 50px;
+}
+
+    .listStyle a {
+        color: white;
+        text-decoration-color: initial;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        padding: 4px 0;
+    }
+
+        .listStyle a:hover {
+            color: darkslateblue;
+        }
+
+        .listStyle a.active {
+            color: darkslateblue;
+        }
+
+
+
+body {
+    padding-left: 300px;
+}
+
+
+
+/*----------------------------SearchPage------------------------*/
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    gap: 15px;
+    justify-content: start;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .artist-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 425px) {
+    .artist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.artist-tile {
+    position: relative;
+    color: white;
+    width: 165px;
+    height: 165px;
+}
+
+    .artist-tile img {
+        flex: none;
+        width: 165px;
+        height: 165px;
+        margin-right: 10px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .artist-tile:hover {
+        transform: scale(1.05);
+        /*box-shadow: 0 0 30px rgba(128, 0, 128, 0.9);*/
+    }
+
+    .artist-tile .eye-icon-wrapper {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .artist-tile .eye-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .artist-tile .heart-icon-wrapper {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .artist-tile .heart-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .artist-tile .edit-icon-wrapper {
+        position: absolute;
+        top: 5px;
+        left: 30px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .artist-tile .edit-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .artist-tile .delete-icon-wrapper {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .artist-tile .delete-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .artist-tile:hover .eye-icon-wrapper,
+    .artist-tile:hover .heart-icon-wrapper,
+    .artist-tile:hover .edit-icon-wrapper,
+    .artist-tile:hover .delete-icon-wrapper {
+        opacity: 1;
+    }
+
+/*----------------------------SongPage------------------------*/
+
+.lyricText {
+    padding: 30px 30px 30px 30px;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.5em;
+    font: inherit;
+}
+
+
+
+/*----------------------------PlayMenu------------------------*/
+
+.rhap_progress-bar-show-download {
+    background-color: rgba(35, 38, 39, 0.5) !important;
+}
+
+.rhap_progress-indicator {
+    background-color: rgb(74, 80, 83) !important;
+}
+
+.rhap_progress-filled {
+    background-color: rgb(74, 80, 83) !important;
+}
+
+.rhap_download-progress {
+    background-color: rgb(35, 38, 39) !important;
+}
+
+.rhap_time {
+    color: rgb(200, 195, 188) !important;
+}
+
+.rhap_volume-bar {
+    background-color: rgb(43, 47, 49) !important;
+}
+
+.rhap_volume-filled {
+    background-color: rgb(74, 80, 83) !important;
+}
+
+.video-react .video-react-control-bar,
+.video-react .video-react-big-play-button {
+    display: none !important;
+}
+input[type="file"] {
+    color: transparent;
+}
+.custom-file-upload input[type='file'] {
+    display: none;
+}
+
+.custom-file-upload label {
+    padding: 10px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid rgb(78, 40, 156);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+    .custom-file-upload label:hover {
+        background-color: #1a1a1a;
+    }
