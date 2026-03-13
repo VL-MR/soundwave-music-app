@@ -159,8 +159,8 @@ export function SongPage() {
                                     var isFavorite = false;
                                     if (favoriteTraсks) {
                                         var favoriteTrack = favoriteTraсks.find(track => {
-                                            let trackTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                            let compareTitle = musicTitle.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                                            let trackTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                            let compareTitle = musicTitle?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
                                             return track.songUrl === songUrl || trackTitle === compareTitle;
                                         });
                                         if (favoriteTrack) {
@@ -172,8 +172,8 @@ export function SongPage() {
                                         dbTrack = dbTracks.find(track => track.songUrl === `https://zvon.top${songUrl}`);
                                         if (!dbTrack) {
                                             dbTrack = dbTracks.find(track => {
-                                                let dbTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                                let compareTitle = musicTitle.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                                                let dbTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                                let compareTitle = musicTitle?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
 
                                                 return dbTitle === compareTitle;
                                             });
@@ -235,8 +235,8 @@ export function SongPage() {
                         let isFavorite = false;
                         if (favoriteTracks) {
                             var favoriteTrack = favoriteTracks.find(favTrack => {
-                                let trackTitle = favTrack.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                                let compareTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                                let trackTitle = favTrack.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                                let compareTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
 
                                 return favTrack.songUrl === track.songUrl || trackTitle === compareTitle;
                             });
@@ -799,8 +799,8 @@ export function SongPage() {
                 .then(response => {
                     const favoriteTracks = response.data;
                     var favoriteTrack = favoriteTracks.find(favTrack => {
-                        let trackTitle = favTrack.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
-                        let compareTitle = track.title.replace(/\(.*?\)/g, '').trim().toLowerCase();
+                        let trackTitle = favTrack.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
+                        let compareTitle = track.title?.toString().replace(/\(.*?\)/g, '').trim().toLowerCase() || '';
 
                         return favTrack.songUrl === track.songUrl || trackTitle === compareTitle;
                     });
