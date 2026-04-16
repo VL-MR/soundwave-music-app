@@ -74,7 +74,7 @@ export function SearchPage() {
 
                                     const promises = artistList.map(function () {
                                         var artistName = $(this).find(".title").text().trim();
-                                        var artistImage = $(this).find(".cover_img").attr("data-src");
+                                        var artistImage = $(this).find(".cover_img").attr("src");
                                         var artistUrl = $(this).find("a").attr("href");
 
                                         if (artistName && artistImage && artistUrl) {
@@ -115,7 +115,7 @@ export function SearchPage() {
 
                                     const promises = albumsList.map(function () {
                                         var albumName = $(this).find(".title").text().trim();
-                                        var albumImage = $(this).find(".cover_img").attr("data-src");
+                                        var albumImage = $(this).find(".cover_img").attr("src");
                                         var albumUrl = $(this).find("a").attr("href");
 
                                         if (albumName && albumImage && albumUrl) {
