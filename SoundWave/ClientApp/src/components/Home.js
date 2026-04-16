@@ -52,8 +52,8 @@ export class Home extends Component {
                 var musicList = $(responseHTML).find(".item");
                 //var limit = 20;
                 //var count = 0;
-                var start = 70;
-                var end = 90;
+                var start = 0;
+                var end = 20;
                 axios.get('/song')
                     .then(response => {
                         const dbTracks = response.data;
@@ -67,7 +67,7 @@ export class Home extends Component {
                             var musicTitle = musicItem.data('title');
                             var songUrl = `/song/${musicItem.data('id')}`;
                             var musicUrl = $(this).find(".play").data("url");
-                            var musicImage = musicItem.data('img');
+                            var musicImage = musicItem.data('img').replace("_small", "_big");
                             var musicArtist = musicItem.data('artist');
                             var musicArtistUrl = musicItem.find('.popupMenu_link__personalMusic').attr('href');
                             var musicDuration = musicItem.find('.duration').text();
