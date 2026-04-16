@@ -2,6 +2,8 @@
 
 Музыкальный веб-сервис с возможностью прослушивания и скачивания треков.
 
+<img width="1920" height="999" alt="Screen1" src="https://github.com/user-attachments/assets/60d827f5-282a-4f76-b034-afafadcf3bcb" />
+
 ## Технологии
 
 * ASP.NET Core Web API
